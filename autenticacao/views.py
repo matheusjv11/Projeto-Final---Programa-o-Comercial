@@ -1,10 +1,10 @@
 from django.views.generic import View 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # -*- coding: utf-8 -*-
 from django.contrib.auth import authenticate, login
 import logging
-
+from dobrador.views import DobradorList
 logger = logging.getLogger(__name__)
 
 class Login(View):
@@ -37,6 +37,6 @@ class Login(View):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponse('Usuário autenticado com sucesso')
+                return redirect('dobrador/listar')
             return render(request, 'autenticacao/login.html', {'mensagem':'Usuário inativo'})    
         return render(request, 'autenticacao/login.html', {'mensagem':'Usuário ou senha incorretos'}) 

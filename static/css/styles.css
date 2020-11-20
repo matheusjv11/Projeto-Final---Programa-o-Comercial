@@ -13,9 +13,11 @@
 html,
 body {
   height: 100%;
+  
 }
 
 .body {
+  
   background-color: var(--branco);
   width: 100%;
   height: 100%;
@@ -26,6 +28,20 @@ body {
   font-family: Herculanum, "Eras Demi ITC", sans-serif;
   
 }
+
+/* ------ Styles de listar ------ */
+
+.grid-dobradores{
+  background-color: blue;
+}
+.card-dobradores{
+  background-color: black;
+  width: 200px;
+  height: 500px;
+}
+
+/* ------ Styles de listar ------ */
+
 
 /* ------ Styles do login ------ */
 .title-login{
@@ -117,3 +133,6 @@ input[type="button"]::-moz-focus-inner {
   border: 0;
   border: none;
 }
+
+
+

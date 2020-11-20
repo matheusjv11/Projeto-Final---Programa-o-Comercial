@@ -1,0 +1,13 @@
+{% extends "dobrador/base.html" %}
+
+{% block content %}
+
+<div class="grid-dobradores">
+    {% for dobrador in lista_dobradores %}
+    <div class="card-dobradores">
+        {{dobrador}}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
