@@ -18,7 +18,7 @@ class Login(View):
 
         if request.user.is_authenticated:
             # Mudar para ir para a tela principal direto
-            return render(request, 'autenticacao/login.html', contexto)
+            return redirect('dobrador/listar')
 
         return render(request, 'autenticacao/login.html', contexto)
 

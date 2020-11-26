@@ -1,11 +1,19 @@
 {% extends "dobrador/base.html" %}
+{% load static %}
 
 {% block content %}
 
 <div class="grid-dobradores">
     {% for dobrador in lista_dobradores %}
     <div class="card-dobradores">
-        {{dobrador}}
+        <div class="card-infos">
+            <div class="card-image"></div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p class="card-title">{{dobrador.nome}}</p>
+                <p class="card-subtitle">{{dobrador.profissao}}</p>
+            </div>
+
+        </div>
     </div>
     {% endfor %}
 </div>
