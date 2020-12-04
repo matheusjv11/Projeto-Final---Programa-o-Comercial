@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 import logging
 from dobrador.views import DobradorList
+from django.contrib.auth import logout
+
 logger = logging.getLogger(__name__)
 
 class Login(View):
@@ -18,7 +20,7 @@ class Login(View):
 
         if request.user.is_authenticated:
             # Mudar para ir para a tela principal direto
-            return redirect('dobrador/listar')
+            return redirect('dobradores/listar')
 
         return render(request, 'autenticacao/login.html', contexto)
 
@@ -37,6 +39,12 @@ class Login(View):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return redirect('dobrador/listar')
+                return redirect('dobradores/listar')
             return render(request, 'autenticacao/login.html', {'mensagem':'Usuário inativo'})    
         return render(request, 'autenticacao/login.html', {'mensagem':'Usuário ou senha incorretos'}) 
+
+class Logout(View):
+
+    def get(self, request):
+        logout(request)
+        return render(request, 'autenticacao/login.html', {'mensagem':'Deslogado com sucesso!'}) 

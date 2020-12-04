@@ -1,0 +1,16 @@
+{% extends "dobrador/base.html" %}
+{% load static %}
+{% load bootstrap %}
+{% block content %}
+
+<div class="main-form-div">
+    <h2 >novo dobrador</h2>
+    <div class="form">
+        <form action="/dobradores/novo/" method="POST" style="width: 100%; gap: 10px;">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <input class="my-btn" type="submit" value="Criar" style="align-self: flex-end;" />
+        </form>
+    </div>
+</div>
+{% endblock content %}

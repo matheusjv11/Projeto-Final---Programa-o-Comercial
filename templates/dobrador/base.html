@@ -20,7 +20,11 @@
 </html>
 
 <body>
-
+    <div class="header">
+        <a href="/dobradores/listar"><p class="title-header">DOBRADORES</p></a>
+        <a href="{% url 'dobradores:novo' %}"><p class="item-header">Novo</p></a>
+        <a href="{% url 'autenticacao:logout' %}"><p class="item-header">Sair</p></a>
+    </div>
     {% block content %}
     {% endblock content %}
 

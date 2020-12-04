@@ -29,6 +29,28 @@ body {
   
 }
 
+.header{
+  background-color: var(--nick);
+  font-family: Herculanum, "Eras Demi ITC", sans-serif;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 15px;
+  color: white;
+}
+
+.title-header{
+  position: relative;
+  justify-self: start;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 /* ------ Styles de listar ------ */
 
 .grid-dobradores{
@@ -109,8 +131,9 @@ body {
 
 .card-login{
   border-radius: 40px;
-  background-color: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--nick);
+  box-shadow: 0 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 label {
@@ -122,14 +145,15 @@ label {
 .form-div-login{
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 /* ------ Styles do login ------ */
 
 .my-btn {
   border-radius: 4px;
   height: 2rem;
-  width: 5rem;
-  background-color: var(--color3);
+  width: fit-content;
+  background-color: var(--fogo);
   color: white;
   margin-top: 15px;
   left: 100px;
@@ -193,5 +217,23 @@ input[type="button"]::-moz-focus-inner {
   border: none;
 }
 
+/* ------ Styles de form ------ */
 
+.main-form-div{
+  font-family: Herculanum, "Eras Demi ITC", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 
+.form{
+  width: 50%;
+  padding: 15px;
+  border: 1px solid var(--nick);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
