@@ -43,8 +43,16 @@ body {
 }
 
 .title-header{
-  position: relative;
-  justify-self: start;
+  color: white;
+  margin-top: 10px;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.title-header:hover{
+  scale: 1.2;
+  text-shadow: var(--preto);
+  text-decoration:none;
 }
 
 a {
@@ -69,7 +77,7 @@ a {
   -moz-border-radius: 20px;
   border-radius: 20px;
   border: none;
-  background:url(../images/bendings/agua.jpg);
+  background:url(../images/bendings/ar.jpg);
   background-size: 100%;
   width: 85%;
   height: 400px;
@@ -78,6 +86,37 @@ a {
   display: flex;
   align-items: flex-end;
   
+}
+
+.card-dobradores.ar{
+  background:url(../images/bendings/ar.jpg);
+}
+
+.card-dobradores.agua{
+  background:url(../images/bendings/agua.jpg);
+}
+
+.card-dobradores.terra{
+  background:url(../images/bendings/terra.jpg);
+}
+
+.card-dobradores.fogo{
+  background:url(../images/bendings/fogo.jpg);
+}
+
+.image-tag{
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  margin-left: 1px;
+  margin-top: 1px;
+  object-fit: cover;
+  transition: transform .2s ease;
+  overflow: hidden;
+}
+
+.image-tag:hover{
+  transform: scale(1.2);
 }
 
 .card-infos{
@@ -103,6 +142,7 @@ a {
   border-radius: 50%;
   margin-top: -130px;
   box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.61);
+  overflow: hidden;
 
 }
 
@@ -236,4 +276,52 @@ input[type="button"]::-moz-focus-inner {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.div-idade-genero{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.div-inside-idade-genero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2px;
+}
+
+.info-destaque{
+  font-family: Herculanum, "Eras Demi ITC", sans-serif;
+  color: var(--agua);
+  font-size: large;
+}
+
+.info-descricao{
+  font-family: Herculanum, "Eras Demi ITC", sans-serif;
+  color: rgba(120, 120, 120, 1);
+}
+
+.options{
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.options-link{
+  color: #333333;
+  transition: 0.2s ease;
+  padding: 5px;
+}
+
+.options-link:hover{
+  scale: 1.4;
+  background-color: var(--nick);
+  border-radius: 2px;
+  color: white;
 }

@@ -10,7 +10,7 @@ class Dobrador(models.Model):
     idade = models.IntegerField('Idade')
     genero = models.CharField('Gênero', max_length=100, choices=[('MASCULINO', 'MASCULINO'),('FEMININO', 'FEMININO'),('NEUTRO', 'NEUTRO')])
     data_cadastro = models.DateTimeField('Primeiro acesso', auto_now_add=True)
-    
+    foto = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
         return '{0} - {1} ({2})'.format(self.nome, self.elemento, self.genero)
