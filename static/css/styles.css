@@ -72,7 +72,8 @@ a {
   justify-items: center;
   gap: 30;
 }
-.card-dobradores{
+
+.card-dobradores-ar{
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -88,21 +89,55 @@ a {
   
 }
 
-.card-dobradores.ar{
-  background:url(../images/bendings/ar.jpg);
-}
-
-.card-dobradores.agua{
+.card-dobradores-agua{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
   background:url(../images/bendings/agua.jpg);
+  background-size: 100%;
+  width: 85%;
+  height: 400px;
+  margin-bottom: 30px;
+  box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.61);
+  display: flex;
+  align-items: flex-end;
+  
 }
 
-.card-dobradores.terra{
+
+.card-dobradores-terra{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
   background:url(../images/bendings/terra.jpg);
+  background-size: 100%;
+  width: 85%;
+  height: 400px;
+  margin-bottom: 30px;
+  box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.61);
+  display: flex;
+  align-items: flex-end;
+  
 }
 
-.card-dobradores.fogo{
+.card-dobradores-fogo{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
   background:url(../images/bendings/fogo.jpg);
+  background-size: 100%;
+  width: 85%;
+  height: 400px;
+  margin-bottom: 30px;
+  box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.61);
+  display: flex;
+  align-items: flex-end;
+  
 }
+
 
 .image-tag{
   width: 118px;
