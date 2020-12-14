@@ -17,7 +17,11 @@
                     {% endif %}
                     <div class="card-infos">
 
-                        <div class="card-image"><img class="image-tag" src="{{ dobrador.foto.url }}" alt="image"></div>
+                        <div class="card-image">
+                            {% if dobrador.foto %}
+                            <img class="image-tag" src="{{ dobrador.foto.url }}" alt="image">
+                            {% endif %}
+                        </div>
                         <div style="display: flex; flex-direction: column; align-items: center;">
                             <p class="card-title">{{dobrador.nome}}</p>
                             <p class="card-subtitle">{{dobrador.profissao}}</p>
